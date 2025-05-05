@@ -32,13 +32,13 @@ $(document).ready(function(){
     });
     // typing text animation script
     var typed = new Typed(".typing", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        strings: [ " web Developer", "Designer", ],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
     });
     var typed = new Typed(".typing-2", {
-        strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+        strings: [" web Developer", "Designer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true
@@ -66,3 +66,22 @@ $(document).ready(function(){
         }
     });
 });
+
+
+let prevScrollPos = window.pageYOffset;
+const navbar = document.querySelector(".navbar");
+
+window.addEventListener("scroll", function() {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+        navbar.classList.remove("hide");
+    } else {
+        navbar.classList.add("hide");
+    }
+
+    prevScrollPos = currentScrollPos;
+});
+
+
+
